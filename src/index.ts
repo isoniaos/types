@@ -5,7 +5,13 @@ import type { HexString } from "./base/hex-string";
 import type { JsonObject } from "./base/json-object";
 import type { NumericString } from "./base/numeric-string";
 import type { TransactionHash } from "./base/transaction-hash";
+import { BODY_KIND_CHAIN_MAP } from "./constants/body-kind-chain-map";
+import { DECISION_TYPE_CHAIN_MAP } from "./constants/decision-type-chain-map";
 import { DOMAIN_CONSTANTS } from "./constants/domain-constants";
+import { ORGANIZATION_STATUS_CHAIN_MAP } from "./constants/organization-status-chain-map";
+import { PROPOSAL_STATUS_CHAIN_MAP } from "./constants/proposal-status-chain-map";
+import { PROPOSAL_TYPE_CHAIN_MAP } from "./constants/proposal-type-chain-map";
+import { ROLE_TYPE_CHAIN_MAP } from "./constants/role-type-chain-map";
 import type { BodyCreatedEventArgsDto } from "./events/body-created-event-args-dto";
 import type { BodyUpdatedEventArgsDto } from "./events/body-updated-event-args-dto";
 import type { GovernanceEventArgsDto } from "./events/governance-event-args-dto";
@@ -63,11 +69,13 @@ export {
   type Address,
   type BodyCreatedEventArgsDto,
   type BodyDto,
+  BODY_KIND_CHAIN_MAP,
   BodyKind,
   type BodyUpdatedEventArgsDto,
   type Bytes32Hash,
   type ChainId,
   DataStatus,
+  DECISION_TYPE_CHAIN_MAP,
   type GovernanceEventArgsDto,
   GovernanceEventName,
   type GovernanceGraphDto,
@@ -85,6 +93,7 @@ export {
   type OrganizationDto,
   type OrganizationOverviewCountsDto,
   type OrganizationOverviewDto,
+  ORGANIZATION_STATUS_CHAIN_MAP,
   OrganizationStatus,
   type OrganizationStatusChangedEventArgsDto,
   type OrganizationUpdatedEventArgsDto,
@@ -103,7 +112,9 @@ export {
   type ProposalRouteExplanationDto,
   type ProposalRouteTimelockDto,
   type ProposalSummaryDto,
+  PROPOSAL_STATUS_CHAIN_MAP,
   ProposalStatus,
+  PROPOSAL_TYPE_CHAIN_MAP,
   ProposalType,
   type ProposalVetoedEventArgsDto,
   type RawEventDto,
@@ -112,6 +123,7 @@ export {
   type RoleCreatedEventArgsDto,
   type RoleDto,
   DecisionType,
+  ROLE_TYPE_CHAIN_MAP,
   type RoleUpdatedEventArgsDto,
   RoleType,
   type RouteBlockedReasonDto,

@@ -7,5 +7,6 @@ export enum RouteBlockedReasonCode {
   Cancelled = "cancelled",
   Expired = "expired",
   PolicyDisabled = "policy_disabled",
+  PolicySnapshotMissing = "policy_snapshot_missing",
   Unknown = "unknown"
 }
