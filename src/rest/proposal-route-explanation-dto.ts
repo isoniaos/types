@@ -12,6 +12,7 @@ export interface ProposalRouteExplanationDto {
   readonly orgId: NumericString;
   readonly proposalId: NumericString;
   readonly proposalType: ProposalType;
+  readonly policyVersion: NumericString;
   readonly status: ProposalStatus;
   readonly requiredApprovalBodies: readonly RouteBodyRequirementDto[];
   readonly vetoBodies: readonly RouteBodyVetoDto[];

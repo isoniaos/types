@@ -10,6 +10,7 @@ export interface ProposalSummaryDto {
   readonly orgId: NumericString;
   readonly proposalId: NumericString;
   readonly proposalType: ProposalType;
+  readonly policyVersion: NumericString;
   readonly title: string;
   readonly creatorAddress: Address;
   readonly status: ProposalStatus;

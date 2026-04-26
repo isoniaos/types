@@ -11,6 +11,7 @@ import type { ProposalCancelledEventArgsDto } from "./proposal-cancelled-event-a
 import type { ProposalCreatedEventArgsDto } from "./proposal-created-event-args-dto";
 import type { ProposalExecutedEventArgsDto } from "./proposal-executed-event-args-dto";
 import type { ProposalQueuedEventArgsDto } from "./proposal-queued-event-args-dto";
+import type { ProposalStatusChangedEventArgsDto } from "./proposal-status-changed-event-args-dto";
 import type { ProposalVetoedEventArgsDto } from "./proposal-vetoed-event-args-dto";
 import type { RoleCreatedEventArgsDto } from "./role-created-event-args-dto";
 import type { RoleUpdatedEventArgsDto } from "./role-updated-event-args-dto";
@@ -29,6 +30,7 @@ export type GovernanceEventArgsDto =
   | ProposalCreatedEventArgsDto
   | ProposalExecutedEventArgsDto
   | ProposalQueuedEventArgsDto
+  | ProposalStatusChangedEventArgsDto
   | ProposalVetoedEventArgsDto
   | RoleCreatedEventArgsDto
   | RoleUpdatedEventArgsDto;

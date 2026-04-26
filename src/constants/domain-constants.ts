@@ -4,7 +4,9 @@ import { RawEventStatus } from "../enums/raw-event-status";
 
 export const DOMAIN_CONSTANTS = {
   apiV1Prefix: "/v1",
-  eventIdentityFields: ["chainId", "blockNumber", "txHash", "logIndex"],
+  eventIdentityFields: ["chainId", "txHash", "logIndex"],
+  logicalEventIdentityFields: ["chainId", "txHash", "logIndex"],
+  physicalEventIdentityFields: ["chainId", "blockHash", "txHash", "logIndex"],
   visibleDataStatuses: [DataStatus.Observed, DataStatus.Confirmed],
   rawEventStatuses: [
     RawEventStatus.Observed,
@@ -26,6 +28,7 @@ export const DOMAIN_CONSTANTS = {
     GovernanceEventName.PolicyRuleSet,
     GovernanceEventName.ProposalCreated,
     GovernanceEventName.ProposalApproved,
+    GovernanceEventName.ProposalStatusChanged,
     GovernanceEventName.ProposalVetoed,
     GovernanceEventName.ProposalQueued,
     GovernanceEventName.ProposalExecuted,

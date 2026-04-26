@@ -4,6 +4,7 @@ import { ProposalType } from "../enums/proposal-type";
 export interface PolicyRuleSetEventArgsDto {
   readonly orgId: NumericString;
   readonly proposalType: ProposalType;
+  readonly version: NumericString;
   readonly requiredApprovalBodies: readonly NumericString[];
   readonly vetoBodies: readonly NumericString[];
   readonly executorBody: NumericString;

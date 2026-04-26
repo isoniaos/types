@@ -12,6 +12,7 @@ export interface ProposalDto {
   readonly orgId: NumericString;
   readonly proposalId: NumericString;
   readonly proposalType: ProposalType;
+  readonly policyVersion: NumericString;
   readonly title: string;
   readonly descriptionUri?: string;
   readonly targetAddress?: Address;

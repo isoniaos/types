@@ -7,6 +7,7 @@ export interface ProposalCreatedEventArgsDto {
   readonly orgId: NumericString;
   readonly proposalId: NumericString;
   readonly proposalType: ProposalType;
+  readonly policyVersion: NumericString;
   readonly creatorAddress: Address;
   readonly targetAddress: Address;
   readonly value: NumericString;

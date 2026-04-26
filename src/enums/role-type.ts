@@ -5,6 +5,5 @@ export enum RoleType {
   Approver = "approver",
   Vetoer = "vetoer",
   Executor = "executor",
-  EmergencyOperator = "emergency_operator",
-  EmergencyPauser = "emergency_operator"
+  EmergencyOperator = "emergency_operator"
 }

@@ -11,6 +11,7 @@ export enum GovernanceEventName {
   PolicyRuleSet = "PolicyRuleSet",
   ProposalCreated = "ProposalCreated",
   ProposalApproved = "ProposalApproved",
+  ProposalStatusChanged = "ProposalStatusChanged",
   ProposalVetoed = "ProposalVetoed",
   ProposalQueued = "ProposalQueued",
   ProposalExecuted = "ProposalExecuted",

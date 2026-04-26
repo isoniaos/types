@@ -20,6 +20,7 @@ import type { ProposalCancelledEventArgsDto } from "./events/proposal-cancelled-
 import type { ProposalCreatedEventArgsDto } from "./events/proposal-created-event-args-dto";
 import type { ProposalExecutedEventArgsDto } from "./events/proposal-executed-event-args-dto";
 import type { ProposalQueuedEventArgsDto } from "./events/proposal-queued-event-args-dto";
+import type { ProposalStatusChangedEventArgsDto } from "./events/proposal-status-changed-event-args-dto";
 import type { ProposalVetoedEventArgsDto } from "./events/proposal-vetoed-event-args-dto";
 import type { RawEventDto } from "./events/raw-event-dto";
 import type { RawEventKeyDto } from "./events/raw-event-key-dto";
@@ -96,6 +97,7 @@ export {
   type ProposalDto,
   type ProposalExecutedEventArgsDto,
   type ProposalQueuedEventArgsDto,
+  type ProposalStatusChangedEventArgsDto,
   type ProposalRouteDto,
   type ProposalRouteExecutionDto,
   type ProposalRouteExplanationDto,
