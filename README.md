@@ -14,6 +14,7 @@ This package is the single shared type surface for IsoniaOS repositories, includ
 - governance event argument DTOs;
 - raw event DTOs;
 - REST response DTOs;
+- Control Plane diagnostics DTOs;
 - governance graph DTOs;
 - shared domain constants.
 
@@ -38,6 +39,7 @@ Do not depend on `master` for application or deployment code. Use a tag or immut
 ```ts
 import {
   GovernanceEventName,
+  type DiagnosticsDto,
   ProposalStatus,
   type ProposalRouteExplanationDto,
   RouteBlockedReasonCode,

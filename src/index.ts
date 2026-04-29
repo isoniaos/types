@@ -48,6 +48,17 @@ import type { GovernanceGraphDto } from "./graph/governance-graph-dto";
 import type { GovernanceGraphEdgeDto } from "./graph/governance-graph-edge-dto";
 import type { GovernanceGraphNodeDto } from "./graph/governance-graph-node-dto";
 import type { BodyDto } from "./rest/body-dto";
+import type {
+  DiagnosticsContractCursorDto,
+  DiagnosticsContractDto,
+  DiagnosticsContractName,
+  DiagnosticsDto,
+  DiagnosticsIndicatorCode,
+  DiagnosticsIndicatorSeverity,
+  DiagnosticsProjectionErrorDto,
+  DiagnosticsRawEventCountsDto,
+  DiagnosticsStaleDataIndicatorDto
+} from "./rest/diagnostics-dto";
 import type { MandateDto } from "./rest/mandate-dto";
 import type { OrganizationDto } from "./rest/organization-dto";
 import type { OrganizationOverviewCountsDto } from "./rest/organization-overview-counts-dto";
@@ -76,6 +87,15 @@ export {
   type ChainId,
   DataStatus,
   DECISION_TYPE_CHAIN_MAP,
+  type DiagnosticsContractCursorDto,
+  type DiagnosticsContractDto,
+  type DiagnosticsContractName,
+  type DiagnosticsDto,
+  type DiagnosticsIndicatorCode,
+  type DiagnosticsIndicatorSeverity,
+  type DiagnosticsProjectionErrorDto,
+  type DiagnosticsRawEventCountsDto,
+  type DiagnosticsStaleDataIndicatorDto,
   type GovernanceEventArgsDto,
   GovernanceEventName,
   type GovernanceGraphDto,

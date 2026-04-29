@@ -14,6 +14,7 @@ This project follows semver-style versioning. During early development, versions
 - Governance event argument DTOs.
 - Raw event DTOs and raw event identity DTOs.
 - REST DTOs for organizations, bodies, roles, mandates, policy rules, proposals, route explanations, and decisions.
+- REST diagnostics DTOs for Control Plane indexing, projection, chain, and stale data status.
 - Governance graph DTOs.
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
