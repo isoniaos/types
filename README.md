@@ -16,6 +16,7 @@ This package is the single shared type surface for IsoniaOS repositories, includ
 - REST response DTOs;
 - Control Plane diagnostics DTOs;
 - governance graph DTOs;
+- setup draft and template DTOs;
 - shared domain constants.
 
 It must stay dependency-light and must not depend on React, NestJS, wagmi, viem, database libraries, Control Plane, App Core, SaaS, or SDK code.
@@ -43,6 +44,8 @@ import {
   ProposalStatus,
   type ProposalRouteExplanationDto,
   RouteBlockedReasonCode,
+  type SetupDraft,
+  SetupActionKind,
 } from "@isonia/types";
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "@isonia/types",
-  "version": "v0.5.0-alpha.1",
+  "version": "v0.5.0-alpha.2",
   "description": "Pure TypeScript shared domain types for IsoniaOS",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -37,6 +37,10 @@
     "./rest/*": {
       "types": "./dist/rest/*.d.ts",
       "default": "./dist/rest/*.js"
+    },
+    "./setup/*": {
+      "types": "./dist/setup/*.d.ts",
+      "default": "./dist/setup/*.js"
     }
   },
   "scripts": {

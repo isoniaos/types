@@ -18,5 +18,7 @@ This project follows semver-style versioning. During early development, versions
 - Governance graph DTOs.
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
+- v0.5 setup and template DTOs for setup drafts, template descriptors, setup actions, execution states, and validation warning codes.
+- Organization policy list DTO aliases for the required v0.5 policy list REST endpoint.
 
 [0.1.0]: https://github.com/isoniaos/types/releases/tag/v0.1.0

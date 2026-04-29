@@ -44,6 +44,10 @@ import { ProposalType } from "./enums/proposal-type";
 import { RawEventStatus } from "./enums/raw-event-status";
 import { RoleType } from "./enums/role-type";
 import { RouteBlockedReasonCode } from "./enums/route-blocked-reason-code";
+import { SetupActionExecutionStatus } from "./enums/setup-action-execution-status";
+import { SetupActionKind } from "./enums/setup-action-kind";
+import { SetupDraftStatus } from "./enums/setup-draft-status";
+import { SetupValidationWarningCode } from "./enums/setup-validation-warning-code";
 import type { GovernanceGraphDto } from "./graph/governance-graph-dto";
 import type { GovernanceGraphEdgeDto } from "./graph/governance-graph-edge-dto";
 import type { GovernanceGraphNodeDto } from "./graph/governance-graph-node-dto";
@@ -63,6 +67,7 @@ import type { MandateDto } from "./rest/mandate-dto";
 import type { OrganizationDto } from "./rest/organization-dto";
 import type { OrganizationOverviewCountsDto } from "./rest/organization-overview-counts-dto";
 import type { OrganizationOverviewDto } from "./rest/organization-overview-dto";
+import type { OrganizationPoliciesDto, OrganizationPolicyDto } from "./rest/organization-policy-dto";
 import type { PolicyRuleDto } from "./rest/policy-rule-dto";
 import type { ProposalDecisionDto } from "./rest/proposal-decision-dto";
 import type { ProposalDto } from "./rest/proposal-dto";
@@ -75,6 +80,25 @@ import type { RoleDto } from "./rest/role-dto";
 import type { RouteBlockedReasonDto } from "./rest/route-blocked-reason-dto";
 import type { RouteBodyRequirementDto } from "./rest/route-body-requirement-dto";
 import type { RouteBodyVetoDto } from "./rest/route-body-veto-dto";
+import type {
+  AssignMandateSetupAction,
+  CreateBodySetupAction,
+  CreateOrganizationSetupAction,
+  CreateRoleSetupAction,
+  SetPolicyRuleSetupAction,
+  SetupAction,
+  SetupActionBase,
+  SetupEntityReference
+} from "./setup/setup-action";
+import type { SetupDraft, SetupDraftOrganization } from "./setup/setup-draft";
+import type { SetupValidationWarning, SetupValidationWarningSeverity } from "./setup/setup-validation-warning";
+import type {
+  TemplateInputDescriptor,
+  TemplateInputKind,
+  TemplateInputOptionDescriptor,
+  TemplateInputValue
+} from "./setup/template-input-descriptor";
+import type { TemplateDefaults, TemplateDescriptor } from "./setup/template-descriptor";
 
 export {
   type Address,
@@ -113,6 +137,8 @@ export {
   type OrganizationDto,
   type OrganizationOverviewCountsDto,
   type OrganizationOverviewDto,
+  type OrganizationPoliciesDto,
+  type OrganizationPolicyDto,
   ORGANIZATION_STATUS_CHAIN_MAP,
   OrganizationStatus,
   type OrganizationStatusChangedEventArgsDto,
@@ -150,6 +176,28 @@ export {
   RouteBlockedReasonCode,
   type RouteBodyRequirementDto,
   type RouteBodyVetoDto,
+  type AssignMandateSetupAction,
+  type CreateBodySetupAction,
+  type CreateOrganizationSetupAction,
+  type CreateRoleSetupAction,
+  type SetPolicyRuleSetupAction,
+  type SetupAction,
+  type SetupActionBase,
+  SetupActionExecutionStatus,
+  SetupActionKind,
+  SetupDraftStatus,
+  type SetupDraft,
+  type SetupDraftOrganization,
+  type SetupEntityReference,
+  type SetupValidationWarning,
+  SetupValidationWarningCode,
+  type SetupValidationWarningSeverity,
+  type TemplateDefaults,
+  type TemplateDescriptor,
+  type TemplateInputDescriptor,
+  type TemplateInputKind,
+  type TemplateInputOptionDescriptor,
+  type TemplateInputValue,
   type TransactionHash,
   DOMAIN_CONSTANTS
 };
