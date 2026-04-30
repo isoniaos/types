@@ -1,4 +1,6 @@
 export enum SetupValidationWarningCode {
+  InvalidAddress = "invalid_address",
+  ZeroAddressAuthority = "zero_address_authority",
   MissingApproverMandate = "missing_approver_mandate",
   MissingVetoMandate = "missing_veto_mandate",
   MissingExecutorMandate = "missing_executor_mandate",
