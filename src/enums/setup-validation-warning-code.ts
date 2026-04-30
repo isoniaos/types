@@ -7,5 +7,6 @@ export enum SetupValidationWarningCode {
   PolicyRouteWithoutEligibleHolder = "policy_route_without_eligible_holder",
   InvalidTimelock = "invalid_timelock",
   EmptyRequiredApprovals = "empty_required_approvals",
-  ProposalTypeScopeMismatch = "proposal_type_scope_mismatch"
+  ProposalTypeScopeMismatch = "proposal_type_scope_mismatch",
+  MissingActionDependency = "missing_action_dependency"
 }

@@ -13,6 +13,7 @@ During early development, versions are released as GitHub tags. Public package r
 - Normalized changelog sections so new entries start under `Unreleased`.
 - Split v0.5 setup and policy-list changes out of the historical 0.1.0 section.
 - Added shared setup warning codes for invalid addresses and zero-address authority.
+- Added `missing_action_dependency` for setup drafts with unresolved action or entity dependencies.
 
 ## [0.5.0-alpha.2]
 
