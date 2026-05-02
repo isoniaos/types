@@ -8,6 +8,10 @@ export type DiagnosticsContractName = "govCore" | "govProposals";
 
 export type DiagnosticsIndicatorSeverity = "info" | "warning" | "error";
 
+export type RuntimeProcessName = "api" | "indexer" | "projections";
+
+export type RuntimeProcessStatus = "running" | "stale" | "unknown";
+
 export type DiagnosticsIndicatorCode =
   | "contract_address_missing"
   | "latest_chain_block_unavailable"
@@ -63,6 +67,21 @@ export interface DiagnosticsStaleDataIndicatorDto {
   readonly lagBlocks?: NumericString;
 }
 
+export interface RuntimeProcessHeartbeatDto {
+  readonly processName: RuntimeProcessName;
+  readonly status: RuntimeProcessStatus;
+  readonly lastSeenAt?: string;
+  readonly ageMs?: number;
+  readonly metadata: Record<string, unknown>;
+}
+
+export interface ProjectionCursorDto {
+  readonly blockNumber: NumericString;
+  readonly txHash: TransactionHash;
+  readonly logIndex: number;
+  readonly processedAt: string;
+}
+
 export interface DiagnosticsDto {
   readonly apiVersion: string;
   readonly chainId: ChainId;
@@ -77,4 +96,34 @@ export interface DiagnosticsDto {
   readonly latestProjectionError?: DiagnosticsProjectionErrorDto;
   readonly staleDataIndicators: DiagnosticsStaleDataIndicatorDto[];
   readonly generatedAt: string;
+}
+
+export interface IndexerDiagnosticsDto {
+  readonly apiVersion: string;
+  readonly chainId: ChainId;
+  readonly generatedAt: string;
+  readonly runtime: {
+    readonly staleAfterMs: number;
+    readonly processes: RuntimeProcessHeartbeatDto[];
+  };
+  readonly indexer: {
+    readonly rpcUrl: string;
+    readonly contracts: DiagnosticsContractDto[];
+    readonly fromBlock: NumericString;
+    readonly pollingIntervalMs: number;
+    readonly safeBlockLag: number;
+    readonly latestChainBlock?: NumericString;
+    readonly latestSafeBlock?: NumericString;
+    readonly lastScannedBlocks: DiagnosticsContractCursorDto[];
+    readonly rawEventCounts: DiagnosticsRawEventCountsDto;
+    readonly staleDataIndicators: DiagnosticsStaleDataIndicatorDto[];
+  };
+  readonly projections: {
+    readonly store: string;
+    readonly pollingIntervalMs: number;
+    readonly lastProjectedCursor: ProjectionCursorDto | null;
+    readonly projectionBacklog: number;
+    readonly failedProjectionCount: number;
+    readonly latestProjectionError?: DiagnosticsProjectionErrorDto;
+  };
 }

@@ -59,9 +59,14 @@ import type {
   DiagnosticsDto,
   DiagnosticsIndicatorCode,
   DiagnosticsIndicatorSeverity,
+  IndexerDiagnosticsDto,
+  ProjectionCursorDto,
   DiagnosticsProjectionErrorDto,
   DiagnosticsRawEventCountsDto,
-  DiagnosticsStaleDataIndicatorDto
+  DiagnosticsStaleDataIndicatorDto,
+  RuntimeProcessHeartbeatDto,
+  RuntimeProcessName,
+  RuntimeProcessStatus
 } from "./rest/diagnostics-dto";
 import type { MandateDto } from "./rest/mandate-dto";
 import type { OrganizationDto } from "./rest/organization-dto";
@@ -117,9 +122,14 @@ export {
   type DiagnosticsDto,
   type DiagnosticsIndicatorCode,
   type DiagnosticsIndicatorSeverity,
+  type IndexerDiagnosticsDto,
+  type ProjectionCursorDto,
   type DiagnosticsProjectionErrorDto,
   type DiagnosticsRawEventCountsDto,
   type DiagnosticsStaleDataIndicatorDto,
+  type RuntimeProcessHeartbeatDto,
+  type RuntimeProcessName,
+  type RuntimeProcessStatus,
   type GovernanceEventArgsDto,
   GovernanceEventName,
   type GovernanceGraphDto,
