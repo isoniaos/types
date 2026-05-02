@@ -10,6 +10,7 @@ During early development, versions are released as GitHub tags. Public package r
 
 ### Changed
 
+- Prepared repository context for v0.6 alpha work after the closed v0.5 compatibility set.
 - Updated package metadata and README examples for the v0.5 Developer Preview compatibility set.
 
 ## [0.5.0-alpha.4]
@@ -48,7 +49,7 @@ During early development, versions are released as GitHub tags. Public package r
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
-[Unreleased]: https://github.com/isoniaos/types/compare/v0.5.0-alpha.4...HEAD
+[Unreleased]: https://github.com/isoniaos/types/compare/v0.5.0-alpha.5...HEAD
 [0.5.0-alpha.4]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.4
 [0.5.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.2
 [0.1.0]: https://github.com/isoniaos/types/releases/tag/v0.1.0

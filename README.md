@@ -23,7 +23,8 @@ It must stay dependency-light and must not depend on React, NestJS, wagmi, viem,
 
 ## Install During Early Development
 
-Until the public beta package registry release, depend on pinned GitHub tags:
+Until the public beta package registry release, depend on pinned GitHub tags.
+For the closed v0.5 compatibility set, use:
 
 ```json
 {
@@ -74,7 +75,7 @@ For every change to shared types:
 3. Update `CHANGELOG.md`.
 4. Update matching documentation in the `isoniaos/docs` repository when DTOs, enums, events, constants, or API response shapes change.
 5. Run `pnpm typecheck` and `pnpm build`.
-6. Commit, push, and create a version tag such as `v0.5.0-alpha.5`.
+6. Commit, push, and create a version tag such as `vX.Y.Z-alpha.N`.
 
 ## Versioning
 
