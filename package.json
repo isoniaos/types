@@ -1,6 +1,6 @@
 {
   "name": "@isonia/types",
-  "version": "0.6.0-alpha.1",
+  "version": "0.6.0-alpha.2",
   "description": "Pure TypeScript shared domain types for IsoniaOS",
   "license": "MIT",
   "main": "./dist/index.js",

@@ -8,6 +8,8 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+## [0.6.0-alpha.2]
+
 ### Changed
 
 - Updated the package Node engine baseline to `>=22` and added repository line-ending policy for v0.6 hardening.
@@ -51,6 +53,7 @@ During early development, versions are released as GitHub tags. Public package r
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
 [Unreleased]: https://github.com/isoniaos/types/compare/v0.5.0-alpha.5...HEAD
+[0.6.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.6.0-alpha.2
 [0.5.0-alpha.4]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.4
 [0.5.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.2
 [0.1.0]: https://github.com/isoniaos/types/releases/tag/v0.1.0
