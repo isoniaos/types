@@ -10,6 +10,7 @@ During early development, versions are released as GitHub tags. Public package r
 
 ### Changed
 
+- Updated the package Node engine baseline to `>=22` and added repository line-ending policy for v0.6 hardening.
 - Prepared repository context for v0.6 alpha work after the closed v0.5 compatibility set.
 - Updated package metadata and README examples for the v0.5 Developer Preview compatibility set.
 
