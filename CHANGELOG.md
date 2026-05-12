@@ -59,7 +59,7 @@ During early development, versions are released as GitHub tags. Public package r
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
 [Unreleased]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.1...HEAD
-[0.7.0-alpha.1]: https://github.com/isoniaos/types/compare/v0.6.0-alpha.2...v0.7.0-alpha.1
+[0.7.0-alpha.1]: https://github.com/isoniaos/types/releases/tag/v0.7.0-alpha.1
 [0.6.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.6.0-alpha.2
 [0.5.0-alpha.4]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.4
 [0.5.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.2
