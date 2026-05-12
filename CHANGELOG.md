@@ -8,9 +8,11 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+## [0.7.0-alpha.2]
+
 ### Added
 
-- Added shared organization finalization types, event/function constants, and blocked bootstrap admin operation metadata for the v0.7 finalization protocol.
+- Added shared organization finalization types, event/function constants, and blocked bootstrap admin operation metadata aligned with `evm-contracts@v0.7.0-alpha.3` for the v0.7 finalization protocol. This package does not implement transaction execution, emergency recovery, or governance recovery semantics.
 
 ## [0.7.0-alpha.1]
 
@@ -62,7 +64,8 @@ During early development, versions are released as GitHub tags. Public package r
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
-[Unreleased]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.1...HEAD
+[Unreleased]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.2...HEAD
+[0.7.0-alpha.2]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.1...v0.7.0-alpha.2
 [0.7.0-alpha.1]: https://github.com/isoniaos/types/releases/tag/v0.7.0-alpha.1
 [0.6.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.6.0-alpha.2
 [0.5.0-alpha.4]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.4
