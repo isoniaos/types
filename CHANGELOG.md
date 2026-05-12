@@ -8,6 +8,8 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+## [0.7.0-alpha.1]
+
 ### Added
 
 - Added v0.7 shared types and constants for typed contract admin batch activation inputs, function names, and activation capability metadata.
@@ -56,7 +58,8 @@ During early development, versions are released as GitHub tags. Public package r
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
-[Unreleased]: https://github.com/isoniaos/types/compare/v0.5.0-alpha.5...HEAD
+[Unreleased]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.1...HEAD
+[0.7.0-alpha.1]: https://github.com/isoniaos/types/compare/v0.6.0-alpha.2...v0.7.0-alpha.1
 [0.6.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.6.0-alpha.2
 [0.5.0-alpha.4]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.4
 [0.5.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.5.0-alpha.2
