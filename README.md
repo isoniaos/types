@@ -18,6 +18,7 @@ This package is the single shared type surface for IsoniaOS repositories, includ
 - governance graph DTOs;
 - setup draft and template DTOs;
 - activation capability and typed contract batch activation input types;
+- organization finalization status, event, contract function, and blocked bootstrap admin operation types;
 - shared domain constants.
 
 It must stay dependency-light and must not depend on React, NestJS, wagmi, viem, database libraries, Control Plane, App Core, SaaS, or SDK code.
@@ -73,6 +74,26 @@ import {
 These types describe the v0.7 `batchCreateBodies`, `batchCreateRoles`, `batchAssignMandates`, and `batchSetPolicyRules` inputs and capability state. Serial activation remains the compatibility fallback. EIP-5792 wallet batching is optional/prototype capability metadata, not the primary activation path.
 
 `@isonia/types` only provides shared TypeScript types and constants. It does not execute transactions, encode ABI calldata, or import contract artifacts.
+
+## v0.7 Bootstrap Finalization
+
+v0.7 adds shared types for organization bootstrap finalization aligned with `evm-contracts@v0.7.0-alpha.3`:
+
+```ts
+import {
+  GovernanceEventName,
+  ORGANIZATION_FINALIZATION_CONTRACT_FUNCTION_NAMES,
+  ORGANIZATION_FINALIZATION_STATUSES,
+  POST_FINALIZATION_BLOCKED_BOOTSTRAP_ADMIN_OPERATIONS,
+  type OrganizationFinalizationReadModelDto,
+} from "@isonia/types";
+```
+
+The new types cover organization finalization status, lifecycle/read-model metadata, `OrganizationFinalized` event arguments, `finalizeOrganization` and `isOrganizationFinalized` contract function names, the `OrganizationAlreadyFinalized` contract error name, and the bootstrap admin operations blocked after finalization.
+
+Finalization is irreversible in the current alpha. A finalized organization can still have the existing `Active` organization status and remain readable/proposal-capable; finalization is modeled as separate handoff metadata rather than a replacement for `OrganizationStatus.Active`.
+
+After finalization, bootstrap admin mutations are blocked at the contract layer. Emergency/recovery and governance-controlled post-finalization changes remain future/open design areas and are not represented as implemented semantics in this package.
 
 ## Scripts
 

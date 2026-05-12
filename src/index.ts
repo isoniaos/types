@@ -20,6 +20,37 @@ import {
   ADMIN_BATCH_ACTIVATION_FUNCTION_NAMES,
   ADMIN_BATCH_ACTIVATION_FUNCTION_NAME_VALUES
 } from "./activation/batch-activation";
+import type { BootstrapAdminOperation } from "./finalization/bootstrap-admin-operation";
+import {
+  BOOTSTRAP_ADMIN_OPERATIONS,
+  POST_FINALIZATION_BLOCKED_BOOTSTRAP_ADMIN_OPERATIONS
+} from "./finalization/bootstrap-admin-operation";
+import type {
+  OrganizationFinalizationContractErrorName,
+  OrganizationFinalizationContractFunctionName
+} from "./finalization/contract-finalization";
+import {
+  ORGANIZATION_FINALIZATION_CONTRACT_ERROR_NAMES,
+  ORGANIZATION_FINALIZATION_CONTRACT_ERROR_NAME_VALUES,
+  ORGANIZATION_FINALIZATION_CONTRACT_FUNCTION_NAMES,
+  ORGANIZATION_FINALIZATION_CONTRACT_FUNCTION_NAME_VALUES
+} from "./finalization/contract-finalization";
+import type {
+  OrganizationFinalizationCapability,
+  OrganizationFinalizationCapabilityStatus,
+  OrganizationFinalizationDerivedMetadata,
+  OrganizationFinalizationReadModelDto,
+  OrganizationFinalizationStatus,
+  OrganizationLifecycleStatus
+} from "./finalization/organization-finalization";
+import {
+  ORGANIZATION_FINALIZATION_CAPABILITY_STATUSES,
+  ORGANIZATION_FINALIZATION_CAPABILITY_STATUS_VALUES,
+  ORGANIZATION_FINALIZATION_STATUSES,
+  ORGANIZATION_FINALIZATION_STATUS_VALUES,
+  ORGANIZATION_LIFECYCLE_STATUSES,
+  ORGANIZATION_LIFECYCLE_STATUS_VALUES
+} from "./finalization/organization-finalization";
 import type { Bytes32Hash } from "./base/bytes32-hash";
 import type { ChainId } from "./base/chain-id";
 import type { HexString } from "./base/hex-string";
@@ -39,6 +70,7 @@ import type { GovernanceEventArgsDto } from "./events/governance-event-args-dto"
 import type { MandateAssignedEventArgsDto } from "./events/mandate-assigned-event-args-dto";
 import type { MandateRevokedEventArgsDto } from "./events/mandate-revoked-event-args-dto";
 import type { OrganizationCreatedEventArgsDto } from "./events/organization-created-event-args-dto";
+import type { OrganizationFinalizedEventArgsDto } from "./events/organization-finalized-event-args-dto";
 import type { OrganizationStatusChangedEventArgsDto } from "./events/organization-status-changed-event-args-dto";
 import type { OrganizationUpdatedEventArgsDto } from "./events/organization-updated-event-args-dto";
 import type { PolicyRuleSetEventArgsDto } from "./events/policy-rule-set-event-args-dto";
@@ -147,6 +179,8 @@ export {
   BODY_KIND_CHAIN_MAP,
   BodyKind,
   type BodyUpdatedEventArgsDto,
+  BOOTSTRAP_ADMIN_OPERATIONS,
+  type BootstrapAdminOperation,
   type Bytes32Hash,
   type ChainId,
   DataStatus,
@@ -182,6 +216,25 @@ export {
   type NumericString,
   type OrganizationCreatedEventArgsDto,
   type OrganizationDto,
+  type OrganizationFinalizationCapability,
+  ORGANIZATION_FINALIZATION_CAPABILITY_STATUSES,
+  ORGANIZATION_FINALIZATION_CAPABILITY_STATUS_VALUES,
+  type OrganizationFinalizationCapabilityStatus,
+  ORGANIZATION_FINALIZATION_CONTRACT_ERROR_NAMES,
+  ORGANIZATION_FINALIZATION_CONTRACT_ERROR_NAME_VALUES,
+  type OrganizationFinalizationContractErrorName,
+  ORGANIZATION_FINALIZATION_CONTRACT_FUNCTION_NAMES,
+  ORGANIZATION_FINALIZATION_CONTRACT_FUNCTION_NAME_VALUES,
+  type OrganizationFinalizationContractFunctionName,
+  type OrganizationFinalizationDerivedMetadata,
+  type OrganizationFinalizationReadModelDto,
+  ORGANIZATION_FINALIZATION_STATUSES,
+  ORGANIZATION_FINALIZATION_STATUS_VALUES,
+  type OrganizationFinalizationStatus,
+  type OrganizationFinalizedEventArgsDto,
+  ORGANIZATION_LIFECYCLE_STATUSES,
+  ORGANIZATION_LIFECYCLE_STATUS_VALUES,
+  type OrganizationLifecycleStatus,
   type OrganizationOverviewCountsDto,
   type OrganizationOverviewDto,
   type OrganizationPoliciesDto,
@@ -193,6 +246,7 @@ export {
   type PolicyRuleDto,
   type PolicyRuleSetInput,
   type PolicyRuleSetEventArgsDto,
+  POST_FINALIZATION_BLOCKED_BOOTSTRAP_ADMIN_OPERATIONS,
   type ProposalApprovedEventArgsDto,
   type ProposalCancelledEventArgsDto,
   type ProposalCreatedEventArgsDto,

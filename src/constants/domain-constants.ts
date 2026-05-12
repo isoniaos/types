@@ -1,6 +1,16 @@
 import { DataStatus } from "../enums/data-status";
 import { GovernanceEventName } from "../enums/governance-event-name";
 import { RawEventStatus } from "../enums/raw-event-status";
+import { POST_FINALIZATION_BLOCKED_BOOTSTRAP_ADMIN_OPERATIONS } from "../finalization/bootstrap-admin-operation";
+import {
+  ORGANIZATION_FINALIZATION_CONTRACT_ERROR_NAME_VALUES,
+  ORGANIZATION_FINALIZATION_CONTRACT_FUNCTION_NAME_VALUES
+} from "../finalization/contract-finalization";
+import {
+  ORGANIZATION_FINALIZATION_CAPABILITY_STATUS_VALUES,
+  ORGANIZATION_FINALIZATION_STATUS_VALUES,
+  ORGANIZATION_LIFECYCLE_STATUS_VALUES
+} from "../finalization/organization-finalization";
 
 export const DOMAIN_CONSTANTS = {
   apiV1Prefix: "/v1",
@@ -19,6 +29,7 @@ export const DOMAIN_CONSTANTS = {
     GovernanceEventName.OrganizationCreated,
     GovernanceEventName.OrganizationUpdated,
     GovernanceEventName.OrganizationStatusChanged,
+    GovernanceEventName.OrganizationFinalized,
     GovernanceEventName.BodyCreated,
     GovernanceEventName.BodyUpdated,
     GovernanceEventName.RoleCreated,
@@ -34,6 +45,12 @@ export const DOMAIN_CONSTANTS = {
     GovernanceEventName.ProposalExecuted,
     GovernanceEventName.ProposalCancelled
   ],
+  organizationFinalizationStatuses: ORGANIZATION_FINALIZATION_STATUS_VALUES,
+  organizationLifecycleStatuses: ORGANIZATION_LIFECYCLE_STATUS_VALUES,
+  organizationFinalizationCapabilityStatuses: ORGANIZATION_FINALIZATION_CAPABILITY_STATUS_VALUES,
+  organizationFinalizationFunctionNames: ORGANIZATION_FINALIZATION_CONTRACT_FUNCTION_NAME_VALUES,
+  organizationFinalizationErrorNames: ORGANIZATION_FINALIZATION_CONTRACT_ERROR_NAME_VALUES,
+  postFinalizationBlockedBootstrapAdminOperations: POST_FINALIZATION_BLOCKED_BOOTSTRAP_ADMIN_OPERATIONS,
   defaultConfirmationDepths: {
     local: 0,
     testnet: 6

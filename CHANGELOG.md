@@ -8,6 +8,10 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+### Added
+
+- Added shared organization finalization types, event/function constants, and blocked bootstrap admin operation metadata for the v0.7 finalization protocol.
+
 ## [0.7.0-alpha.1]
 
 ### Added

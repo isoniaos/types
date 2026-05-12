@@ -34,6 +34,10 @@
       "types": "./dist/events/*.d.ts",
       "default": "./dist/events/*.js"
     },
+    "./finalization/*": {
+      "types": "./dist/finalization/*.d.ts",
+      "default": "./dist/finalization/*.js"
+    },
     "./graph/*": {
       "types": "./dist/graph/*.d.ts",
       "default": "./dist/graph/*.js"

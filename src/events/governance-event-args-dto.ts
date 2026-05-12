@@ -3,6 +3,7 @@ import type { BodyUpdatedEventArgsDto } from "./body-updated-event-args-dto";
 import type { MandateAssignedEventArgsDto } from "./mandate-assigned-event-args-dto";
 import type { MandateRevokedEventArgsDto } from "./mandate-revoked-event-args-dto";
 import type { OrganizationCreatedEventArgsDto } from "./organization-created-event-args-dto";
+import type { OrganizationFinalizedEventArgsDto } from "./organization-finalized-event-args-dto";
 import type { OrganizationStatusChangedEventArgsDto } from "./organization-status-changed-event-args-dto";
 import type { OrganizationUpdatedEventArgsDto } from "./organization-updated-event-args-dto";
 import type { PolicyRuleSetEventArgsDto } from "./policy-rule-set-event-args-dto";
@@ -22,6 +23,7 @@ export type GovernanceEventArgsDto =
   | MandateAssignedEventArgsDto
   | MandateRevokedEventArgsDto
   | OrganizationCreatedEventArgsDto
+  | OrganizationFinalizedEventArgsDto
   | OrganizationStatusChangedEventArgsDto
   | OrganizationUpdatedEventArgsDto
   | PolicyRuleSetEventArgsDto
