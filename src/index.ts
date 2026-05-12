@@ -1,4 +1,25 @@
 import type { Address } from "./base/address";
+import type {
+  ActivationCapabilities,
+  ActivationCapabilityFlags,
+  ContractBatchActivationSupport,
+  WalletBatchEip5792ActivationSupport
+} from "./activation/activation-capabilities";
+import type {
+  AdminBatchActivationFunctionName,
+  BatchAssignMandatesInput,
+  BatchCreateBodiesInput,
+  BatchCreateRolesInput,
+  BatchSetPolicyRulesInput,
+  BodyCreateInput,
+  MandateAssignInput,
+  PolicyRuleSetInput,
+  RoleCreateInput
+} from "./activation/batch-activation";
+import {
+  ADMIN_BATCH_ACTIVATION_FUNCTION_NAMES,
+  ADMIN_BATCH_ACTIVATION_FUNCTION_NAME_VALUES
+} from "./activation/batch-activation";
 import type { Bytes32Hash } from "./base/bytes32-hash";
 import type { ChainId } from "./base/chain-id";
 import type { HexString } from "./base/hex-string";
@@ -32,6 +53,8 @@ import type { RawEventDto } from "./events/raw-event-dto";
 import type { RawEventKeyDto } from "./events/raw-event-key-dto";
 import type { RoleCreatedEventArgsDto } from "./events/role-created-event-args-dto";
 import type { RoleUpdatedEventArgsDto } from "./events/role-updated-event-args-dto";
+import { ActivationCapabilityStatus } from "./enums/activation-capability-status";
+import { ActivationExecutionMode } from "./enums/activation-execution-mode";
 import { BodyKind } from "./enums/body-kind";
 import { DataStatus } from "./enums/data-status";
 import { DecisionType } from "./enums/decision-type";
@@ -106,8 +129,20 @@ import type {
 import type { TemplateDefaults, TemplateDescriptor } from "./setup/template-descriptor";
 
 export {
+  type ActivationCapabilities,
+  type ActivationCapabilityFlags,
+  ActivationCapabilityStatus,
+  ActivationExecutionMode,
   type Address,
+  type AdminBatchActivationFunctionName,
+  ADMIN_BATCH_ACTIVATION_FUNCTION_NAMES,
+  ADMIN_BATCH_ACTIVATION_FUNCTION_NAME_VALUES,
+  type BatchAssignMandatesInput,
+  type BatchCreateBodiesInput,
+  type BatchCreateRolesInput,
+  type BatchSetPolicyRulesInput,
   type BodyCreatedEventArgsDto,
+  type BodyCreateInput,
   type BodyDto,
   BODY_KIND_CHAIN_MAP,
   BodyKind,
@@ -127,6 +162,7 @@ export {
   type DiagnosticsProjectionErrorDto,
   type DiagnosticsRawEventCountsDto,
   type DiagnosticsStaleDataIndicatorDto,
+  type ContractBatchActivationSupport,
   type RuntimeProcessHeartbeatDto,
   type RuntimeProcessName,
   type RuntimeProcessStatus,
@@ -140,6 +176,7 @@ export {
   type HexString,
   type JsonObject,
   type MandateAssignedEventArgsDto,
+  type MandateAssignInput,
   type MandateDto,
   type MandateRevokedEventArgsDto,
   type NumericString,
@@ -154,6 +191,7 @@ export {
   type OrganizationStatusChangedEventArgsDto,
   type OrganizationUpdatedEventArgsDto,
   type PolicyRuleDto,
+  type PolicyRuleSetInput,
   type PolicyRuleSetEventArgsDto,
   type ProposalApprovedEventArgsDto,
   type ProposalCancelledEventArgsDto,
@@ -177,6 +215,7 @@ export {
   type RawEventKeyDto,
   RawEventStatus,
   type RoleCreatedEventArgsDto,
+  type RoleCreateInput,
   type RoleDto,
   DecisionType,
   ROLE_TYPE_CHAIN_MAP,
@@ -209,5 +248,6 @@ export {
   type TemplateInputOptionDescriptor,
   type TemplateInputValue,
   type TransactionHash,
+  type WalletBatchEip5792ActivationSupport,
   DOMAIN_CONSTANTS
 };

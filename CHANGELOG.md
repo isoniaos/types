@@ -8,6 +8,10 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+### Added
+
+- Added v0.7 shared types and constants for typed contract admin batch activation inputs, function names, and activation capability metadata.
+
 ## [0.6.0-alpha.2]
 
 ### Changed

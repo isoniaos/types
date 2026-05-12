@@ -14,6 +14,10 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./activation/*": {
+      "types": "./dist/activation/*.d.ts",
+      "default": "./dist/activation/*.js"
+    },
     "./base/*": {
       "types": "./dist/base/*.d.ts",
       "default": "./dist/base/*.js"

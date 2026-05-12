@@ -17,6 +17,7 @@ This package is the single shared type surface for IsoniaOS repositories, includ
 - Control Plane diagnostics DTOs;
 - governance graph DTOs;
 - setup draft and template DTOs;
+- activation capability and typed contract batch activation input types;
 - shared domain constants.
 
 It must stay dependency-light and must not depend on React, NestJS, wagmi, viem, database libraries, Control Plane, App Core, SaaS, or SDK code.
@@ -55,6 +56,23 @@ Subpath imports are also available:
 ```ts
 import { PROPOSAL_TYPE_CHAIN_MAP } from "@isonia/types/constants/proposal-type-chain-map";
 ```
+
+## v0.7 Typed Batch Activation
+
+v0.7 adds shared types for the contract-level typed admin batch activation path:
+
+```ts
+import {
+  ADMIN_BATCH_ACTIVATION_FUNCTION_NAMES,
+  ActivationExecutionMode,
+  type BodyCreateInput,
+  type ContractBatchActivationSupport,
+} from "@isonia/types";
+```
+
+These types describe the v0.7 `batchCreateBodies`, `batchCreateRoles`, `batchAssignMandates`, and `batchSetPolicyRules` inputs and capability state. Serial activation remains the compatibility fallback. EIP-5792 wallet batching is optional/prototype capability metadata, not the primary activation path.
+
+`@isonia/types` only provides shared TypeScript types and constants. It does not execute transactions, encode ABI calldata, or import contract artifacts.
 
 ## Scripts
 
