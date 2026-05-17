@@ -8,6 +8,13 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+## [0.8.0-alpha.1]
+
+### Added
+
+- Added the first v0.8 accountability and integration preview type baseline: archive display states, accountability execution statuses, decision record results, external resource providers/relations, source labels, trust boundaries, authority claims, import statuses, observed transaction statuses, source disclosure DTOs, external resource DTOs, accountability record DTOs, decision record DTOs, and public organization archive DTOs.
+- Added lightweight source-label and trust-boundary text constants for downstream public archive and accountability presentation without adding runtime provider integrations or validation dependencies.
+
 ## [0.7.0-alpha.2]
 
 ### Added
@@ -64,7 +71,8 @@ During early development, versions are released as GitHub tags. Public package r
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
-[Unreleased]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.2...HEAD
+[Unreleased]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.1...HEAD
+[0.8.0-alpha.1]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.2...v0.8.0-alpha.1
 [0.7.0-alpha.2]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.1...v0.7.0-alpha.2
 [0.7.0-alpha.1]: https://github.com/isoniaos/types/releases/tag/v0.7.0-alpha.1
 [0.6.0-alpha.2]: https://github.com/isoniaos/types/releases/tag/v0.6.0-alpha.2

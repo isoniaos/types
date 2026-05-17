@@ -26,12 +26,12 @@ It must stay dependency-light and must not depend on React, NestJS, wagmi, viem,
 ## Install During Early Development
 
 Until the public beta package registry release, depend on pinned GitHub tags.
-For the closed v0.5 compatibility set, use:
+For the current v0.8 accountability and integration preview baseline, after the matching tag is created, use:
 
 ```json
 {
   "dependencies": {
-    "@isonia/types": "github:isoniaos/types#v0.5.0-alpha.5"
+    "@isonia/types": "github:isoniaos/types#v0.8.0-alpha.1"
   }
 }
 ```
@@ -57,6 +57,27 @@ Subpath imports are also available:
 ```ts
 import { PROPOSAL_TYPE_CHAIN_MAP } from "@isonia/types/constants/proposal-type-chain-map";
 ```
+
+## v0.8 Accountability and Integration Preview
+
+v0.8 adds shared types for the Public Governance Archive, Basic Accountability Dashboard, and Integration Preview:
+
+```ts
+import {
+  AccountabilityExecutionStatus,
+  ExternalAuthorityClaim,
+  ExternalResourceProvider,
+  type AccountabilityRecordDto,
+  type DecisionRecordDto,
+  type ExternalResourceDto,
+} from "@isonia/types";
+```
+
+The new surface includes `DecisionRecordDto`, `AccountabilityRecordDto`, `ExternalResourceDto`, source disclosures, source labels, trust boundaries, authority claims, public archive display states, accountability execution statuses, external import states, and observed transaction statuses.
+
+Contracts remain authoritative for modeled onchain governance state. External resources are evidence or context unless explicitly modeled as authoritative for a specific field. Manual accountability updates are annotations, not protocol truth.
+
+`@isonia/types` only provides shared TypeScript types and constants. It does not execute transactions, parse external providers, verify proofs, import Snapshot/Safe/Tally/Agora records, or implement Control Plane endpoints, SDK clients, contracts, or UI behavior.
 
 ## v0.7 Typed Batch Activation
 

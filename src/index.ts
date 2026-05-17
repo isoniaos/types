@@ -60,6 +60,10 @@ import type { TransactionHash } from "./base/transaction-hash";
 import { BODY_KIND_CHAIN_MAP } from "./constants/body-kind-chain-map";
 import { DECISION_TYPE_CHAIN_MAP } from "./constants/decision-type-chain-map";
 import { DOMAIN_CONSTANTS } from "./constants/domain-constants";
+import {
+  EXTERNAL_SOURCE_LABEL_TEXT,
+  EXTERNAL_TRUST_BOUNDARY_TEXT
+} from "./constants/external-source-label-text";
 import { ORGANIZATION_STATUS_CHAIN_MAP } from "./constants/organization-status-chain-map";
 import { PROPOSAL_STATUS_CHAIN_MAP } from "./constants/proposal-status-chain-map";
 import { PROPOSAL_TYPE_CHAIN_MAP } from "./constants/proposal-type-chain-map";
@@ -85,14 +89,25 @@ import type { RawEventDto } from "./events/raw-event-dto";
 import type { RawEventKeyDto } from "./events/raw-event-key-dto";
 import type { RoleCreatedEventArgsDto } from "./events/role-created-event-args-dto";
 import type { RoleUpdatedEventArgsDto } from "./events/role-updated-event-args-dto";
+import { AccountabilityExecutionStatus } from "./enums/accountability-execution-status";
 import { ActivationCapabilityStatus } from "./enums/activation-capability-status";
 import { ActivationExecutionMode } from "./enums/activation-execution-mode";
+import { ArchiveProposalDisplayState } from "./enums/archive-proposal-display-state";
 import { BodyKind } from "./enums/body-kind";
 import { DataStatus } from "./enums/data-status";
+import { DecisionRecordResult } from "./enums/decision-record-result";
 import { DecisionType } from "./enums/decision-type";
+import { ExternalAuthorityClaim } from "./enums/external-authority-claim";
+import { ExternalImportStatus } from "./enums/external-import-status";
+import { ExternalResourceProvider } from "./enums/external-resource-provider";
+import { ExternalResourceRelation } from "./enums/external-resource-relation";
+import { ExternalSourceLabel } from "./enums/external-source-label";
+import { ExternalTrustBoundary } from "./enums/external-trust-boundary";
 import { GovernanceEventName } from "./enums/governance-event-name";
+import { GovernanceRecordSourceCategory } from "./enums/governance-record-source-category";
 import { GraphEdgeType } from "./enums/graph-edge-type";
 import { GraphNodeType } from "./enums/graph-node-type";
+import { ObservedTransactionStatus } from "./enums/observed-transaction-status";
 import { OrganizationStatus } from "./enums/organization-status";
 import { ProposalStatus } from "./enums/proposal-status";
 import { ProposalType } from "./enums/proposal-type";
@@ -106,7 +121,21 @@ import { SetupValidationWarningCode } from "./enums/setup-validation-warning-cod
 import type { GovernanceGraphDto } from "./graph/governance-graph-dto";
 import type { GovernanceGraphEdgeDto } from "./graph/governance-graph-edge-dto";
 import type { GovernanceGraphNodeDto } from "./graph/governance-graph-node-dto";
+import type {
+  AccountabilityRecordDto,
+  CompletionConfirmationDto,
+  LinkedTransactionDto,
+  ManualAccountabilityUpdateDto,
+  ResponsiblePartyDto
+} from "./rest/accountability-record-dto";
+import type { ArchiveProposalSummaryDto } from "./rest/archive-proposal-summary-dto";
 import type { BodyDto } from "./rest/body-dto";
+import type {
+  DecisionApprovalSummaryDto,
+  DecisionRecordDto,
+  DecisionRecordOutcomeDto,
+  DecisionRecordTimestampsDto
+} from "./rest/decision-record-dto";
 import type {
   DiagnosticsContractCursorDto,
   DiagnosticsContractDto,
@@ -123,6 +152,8 @@ import type {
   RuntimeProcessName,
   RuntimeProcessStatus
 } from "./rest/diagnostics-dto";
+import type { ExternalResourceDto } from "./rest/external-resource-dto";
+import type { ExternalResourceRefDto } from "./rest/external-resource-ref-dto";
 import type { MandateDto } from "./rest/mandate-dto";
 import type { OrganizationDto } from "./rest/organization-dto";
 import type { OrganizationOverviewCountsDto } from "./rest/organization-overview-counts-dto";
@@ -136,10 +167,15 @@ import type { ProposalRouteExecutionDto } from "./rest/proposal-route-execution-
 import type { ProposalRouteExplanationDto } from "./rest/proposal-route-explanation-dto";
 import type { ProposalRouteTimelockDto } from "./rest/proposal-route-timelock-dto";
 import type { ProposalSummaryDto } from "./rest/proposal-summary-dto";
+import type {
+  PublicOrganizationArchiveCountsDto,
+  PublicOrganizationArchiveDto
+} from "./rest/public-organization-archive-dto";
 import type { RoleDto } from "./rest/role-dto";
 import type { RouteBlockedReasonDto } from "./rest/route-blocked-reason-dto";
 import type { RouteBodyRequirementDto } from "./rest/route-body-requirement-dto";
 import type { RouteBodyVetoDto } from "./rest/route-body-veto-dto";
+import type { SourceDisclosureDto } from "./rest/source-disclosure-dto";
 import type {
   AssignMandateSetupAction,
   CreateBodySetupAction,
@@ -161,6 +197,8 @@ import type {
 import type { TemplateDefaults, TemplateDescriptor } from "./setup/template-descriptor";
 
 export {
+  type AccountabilityRecordDto,
+  AccountabilityExecutionStatus,
   type ActivationCapabilities,
   type ActivationCapabilityFlags,
   ActivationCapabilityStatus,
@@ -173,6 +211,8 @@ export {
   type BatchCreateBodiesInput,
   type BatchCreateRolesInput,
   type BatchSetPolicyRulesInput,
+  ArchiveProposalDisplayState,
+  type ArchiveProposalSummaryDto,
   type BodyCreatedEventArgsDto,
   type BodyCreateInput,
   type BodyDto,
@@ -185,6 +225,11 @@ export {
   type ChainId,
   DataStatus,
   DECISION_TYPE_CHAIN_MAP,
+  type DecisionApprovalSummaryDto,
+  type DecisionRecordDto,
+  type DecisionRecordOutcomeDto,
+  DecisionRecordResult,
+  type DecisionRecordTimestampsDto,
   type DiagnosticsContractCursorDto,
   type DiagnosticsContractDto,
   type DiagnosticsContractName,
@@ -200,8 +245,20 @@ export {
   type RuntimeProcessHeartbeatDto,
   type RuntimeProcessName,
   type RuntimeProcessStatus,
+  EXTERNAL_SOURCE_LABEL_TEXT,
+  EXTERNAL_TRUST_BOUNDARY_TEXT,
+  ExternalAuthorityClaim,
+  ExternalImportStatus,
+  type ExternalResourceDto,
+  ExternalResourceProvider,
+  type ExternalResourceRefDto,
+  ExternalResourceRelation,
+  ExternalSourceLabel,
+  ExternalTrustBoundary,
+  type CompletionConfirmationDto,
   type GovernanceEventArgsDto,
   GovernanceEventName,
+  GovernanceRecordSourceCategory,
   type GovernanceGraphDto,
   type GovernanceGraphEdgeDto,
   type GovernanceGraphNodeDto,
@@ -213,7 +270,10 @@ export {
   type MandateAssignInput,
   type MandateDto,
   type MandateRevokedEventArgsDto,
+  type LinkedTransactionDto,
+  type ManualAccountabilityUpdateDto,
   type NumericString,
+  ObservedTransactionStatus,
   type OrganizationCreatedEventArgsDto,
   type OrganizationDto,
   type OrganizationFinalizationCapability,
@@ -260,6 +320,8 @@ export {
   type ProposalRouteExplanationDto,
   type ProposalRouteTimelockDto,
   type ProposalSummaryDto,
+  type PublicOrganizationArchiveCountsDto,
+  type PublicOrganizationArchiveDto,
   PROPOSAL_STATUS_CHAIN_MAP,
   ProposalStatus,
   PROPOSAL_TYPE_CHAIN_MAP,
@@ -271,6 +333,7 @@ export {
   type RoleCreatedEventArgsDto,
   type RoleCreateInput,
   type RoleDto,
+  type ResponsiblePartyDto,
   DecisionType,
   ROLE_TYPE_CHAIN_MAP,
   type RoleUpdatedEventArgsDto,
@@ -279,6 +342,7 @@ export {
   RouteBlockedReasonCode,
   type RouteBodyRequirementDto,
   type RouteBodyVetoDto,
+  type SourceDisclosureDto,
   type AssignMandateSetupAction,
   type CreateBodySetupAction,
   type CreateOrganizationSetupAction,
