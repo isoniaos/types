@@ -8,6 +8,12 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+## [0.8.0-alpha.2]
+
+### Added
+
+- Added shared v0.8 execution permission registry type surface: governance event names, update event argument DTOs, REST/read-model DTOs for organization-scoped target and selector rules, and explicit route blocked reason codes for execution target, selector, value-limit, and calldata availability failures.
+
 ## [0.8.0-alpha.1]
 
 ### Added
@@ -71,7 +77,8 @@ During early development, versions are released as GitHub tags. Public package r
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
-[Unreleased]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.1...HEAD
+[Unreleased]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.2...HEAD
+[0.8.0-alpha.2]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.1...v0.8.0-alpha.2
 [0.8.0-alpha.1]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.2...v0.8.0-alpha.1
 [0.7.0-alpha.2]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.1...v0.7.0-alpha.2
 [0.7.0-alpha.1]: https://github.com/isoniaos/types/releases/tag/v0.7.0-alpha.1

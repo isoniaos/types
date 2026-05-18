@@ -70,6 +70,8 @@ import { PROPOSAL_TYPE_CHAIN_MAP } from "./constants/proposal-type-chain-map";
 import { ROLE_TYPE_CHAIN_MAP } from "./constants/role-type-chain-map";
 import type { BodyCreatedEventArgsDto } from "./events/body-created-event-args-dto";
 import type { BodyUpdatedEventArgsDto } from "./events/body-updated-event-args-dto";
+import type { ExecutionSelectorRuleUpdatedEventArgsDto } from "./events/execution-selector-rule-updated-event-args-dto";
+import type { ExecutionTargetRuleUpdatedEventArgsDto } from "./events/execution-target-rule-updated-event-args-dto";
 import type { GovernanceEventArgsDto } from "./events/governance-event-args-dto";
 import type { MandateAssignedEventArgsDto } from "./events/mandate-assigned-event-args-dto";
 import type { MandateRevokedEventArgsDto } from "./events/mandate-revoked-event-args-dto";
@@ -154,6 +156,12 @@ import type {
 } from "./rest/diagnostics-dto";
 import type { ExternalResourceDto } from "./rest/external-resource-dto";
 import type { ExternalResourceRefDto } from "./rest/external-resource-ref-dto";
+import type {
+  ExecutionSelectorRuleDto,
+  ExecutionTargetPermissionDto,
+  ExecutionTargetRuleDto,
+  OrganizationExecutionPermissionsDto
+} from "./rest/execution-permission-dto";
 import type { MandateDto } from "./rest/mandate-dto";
 import type { OrganizationDto } from "./rest/organization-dto";
 import type { OrganizationOverviewCountsDto } from "./rest/organization-overview-counts-dto";
@@ -245,6 +253,11 @@ export {
   type RuntimeProcessHeartbeatDto,
   type RuntimeProcessName,
   type RuntimeProcessStatus,
+  type ExecutionSelectorRuleDto,
+  type ExecutionSelectorRuleUpdatedEventArgsDto,
+  type ExecutionTargetPermissionDto,
+  type ExecutionTargetRuleDto,
+  type ExecutionTargetRuleUpdatedEventArgsDto,
   EXTERNAL_SOURCE_LABEL_TEXT,
   EXTERNAL_TRUST_BOUNDARY_TEXT,
   ExternalAuthorityClaim,
@@ -299,6 +312,7 @@ export {
   type OrganizationOverviewDto,
   type OrganizationPoliciesDto,
   type OrganizationPolicyDto,
+  type OrganizationExecutionPermissionsDto,
   ORGANIZATION_STATUS_CHAIN_MAP,
   OrganizationStatus,
   type OrganizationStatusChangedEventArgsDto,

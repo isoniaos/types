@@ -37,6 +37,8 @@ export const DOMAIN_CONSTANTS = {
     GovernanceEventName.MandateAssigned,
     GovernanceEventName.MandateRevoked,
     GovernanceEventName.PolicyRuleSet,
+    GovernanceEventName.ExecutionTargetRuleUpdated,
+    GovernanceEventName.ExecutionSelectorRuleUpdated,
     GovernanceEventName.ProposalCreated,
     GovernanceEventName.ProposalApproved,
     GovernanceEventName.ProposalStatusChanged,

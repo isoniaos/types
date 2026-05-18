@@ -8,5 +8,9 @@ export enum RouteBlockedReasonCode {
   Expired = "expired",
   PolicyDisabled = "policy_disabled",
   PolicySnapshotMissing = "policy_snapshot_missing",
+  ExecutionTargetNotAllowed = "execution_target_not_allowed",
+  ExecutionSelectorNotAllowed = "execution_selector_not_allowed",
+  ExecutionValueLimitExceeded = "execution_value_limit_exceeded",
+  ExecutionCalldataUnavailable = "execution_calldata_unavailable",
   Unknown = "unknown"
 }

@@ -10,6 +10,8 @@ export enum GovernanceEventName {
   MandateAssigned = "MandateAssigned",
   MandateRevoked = "MandateRevoked",
   PolicyRuleSet = "PolicyRuleSet",
+  ExecutionTargetRuleUpdated = "ExecutionTargetRuleUpdated",
+  ExecutionSelectorRuleUpdated = "ExecutionSelectorRuleUpdated",
   ProposalCreated = "ProposalCreated",
   ProposalApproved = "ProposalApproved",
   ProposalStatusChanged = "ProposalStatusChanged",

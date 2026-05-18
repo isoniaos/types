@@ -19,6 +19,7 @@ This package is the single shared type surface for IsoniaOS repositories, includ
 - setup draft and template DTOs;
 - activation capability and typed contract batch activation input types;
 - organization finalization status, event, contract function, and blocked bootstrap admin operation types;
+- v0.8 execution permission registry event and read-model DTOs;
 - shared domain constants.
 
 It must stay dependency-light and must not depend on React, NestJS, wagmi, viem, database libraries, Control Plane, App Core, SaaS, or SDK code.
@@ -31,7 +32,7 @@ For the current v0.8 accountability and integration preview baseline, after the 
 ```json
 {
   "dependencies": {
-    "@isonia/types": "github:isoniaos/types#v0.8.0-alpha.1"
+    "@isonia/types": "github:isoniaos/types#v0.8.0-alpha.2"
   }
 }
 ```
@@ -74,6 +75,20 @@ import {
 ```
 
 The new surface includes `DecisionRecordDto`, `AccountabilityRecordDto`, `ExternalResourceDto`, source disclosures, source labels, trust boundaries, authority claims, public archive display states, accountability execution statuses, external import states, and observed transaction statuses.
+
+v0.8 also includes shared execution permission registry types for the protocol's organization-scoped target and selector rules:
+
+```ts
+import {
+  GovernanceEventName,
+  type ExecutionTargetRuleUpdatedEventArgsDto,
+  type ExecutionSelectorRuleUpdatedEventArgsDto,
+  type OrganizationExecutionPermissionsDto,
+  RouteBlockedReasonCode,
+} from "@isonia/types";
+```
+
+The execution permission surface describes configured IsoniaOS protocol target rules, selector rules, update event arguments, and route blocked reason codes. It does not decode arbitrary customer target contracts or treat target contract events as governance authority.
 
 Contracts remain authoritative for modeled onchain governance state. External resources are evidence or context unless explicitly modeled as authoritative for a specific field. Manual accountability updates are annotations, not protocol truth.
 

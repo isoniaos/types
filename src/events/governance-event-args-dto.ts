@@ -1,5 +1,7 @@
 import type { BodyCreatedEventArgsDto } from "./body-created-event-args-dto";
 import type { BodyUpdatedEventArgsDto } from "./body-updated-event-args-dto";
+import type { ExecutionSelectorRuleUpdatedEventArgsDto } from "./execution-selector-rule-updated-event-args-dto";
+import type { ExecutionTargetRuleUpdatedEventArgsDto } from "./execution-target-rule-updated-event-args-dto";
 import type { MandateAssignedEventArgsDto } from "./mandate-assigned-event-args-dto";
 import type { MandateRevokedEventArgsDto } from "./mandate-revoked-event-args-dto";
 import type { OrganizationCreatedEventArgsDto } from "./organization-created-event-args-dto";
@@ -20,6 +22,8 @@ import type { RoleUpdatedEventArgsDto } from "./role-updated-event-args-dto";
 export type GovernanceEventArgsDto =
   | BodyCreatedEventArgsDto
   | BodyUpdatedEventArgsDto
+  | ExecutionSelectorRuleUpdatedEventArgsDto
+  | ExecutionTargetRuleUpdatedEventArgsDto
   | MandateAssignedEventArgsDto
   | MandateRevokedEventArgsDto
   | OrganizationCreatedEventArgsDto
