@@ -52,6 +52,7 @@ import {
   ORGANIZATION_LIFECYCLE_STATUS_VALUES
 } from "./finalization/organization-finalization";
 import type { Bytes32Hash } from "./base/bytes32-hash";
+import type { Bytes4Selector } from "./base/bytes4-selector";
 import type { ChainId } from "./base/chain-id";
 import type { HexString } from "./base/hex-string";
 import type { JsonObject } from "./base/json-object";
@@ -230,6 +231,7 @@ export {
   BOOTSTRAP_ADMIN_OPERATIONS,
   type BootstrapAdminOperation,
   type Bytes32Hash,
+  type Bytes4Selector,
   type ChainId,
   DataStatus,
   DECISION_TYPE_CHAIN_MAP,

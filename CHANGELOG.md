@@ -8,6 +8,13 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+## [0.8.0-alpha.3]
+
+### Added
+
+- Added the shared `Bytes4Selector` base type and selector-aware proposal action identity fields for `ProposalCreatedEventArgsDto` and `ProposalDto`, aligned with the v0.8 protocol identity of `targetAddress + value + actionSelector + dataHash`.
+- Tightened existing execution selector rule DTO fields to use `Bytes4Selector` while keeping the package limited to shared type surface and not adding runtime decoding or provider logic.
+
 ## [0.8.0-alpha.2]
 
 ### Added
@@ -77,7 +84,8 @@ During early development, versions are released as GitHub tags. Public package r
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
-[Unreleased]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.2...HEAD
+[Unreleased]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.3...HEAD
+[0.8.0-alpha.3]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.2...v0.8.0-alpha.3
 [0.8.0-alpha.2]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.1...v0.8.0-alpha.2
 [0.8.0-alpha.1]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.2...v0.8.0-alpha.1
 [0.7.0-alpha.2]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.1...v0.7.0-alpha.2
