@@ -8,6 +8,7 @@ import type { OrganizationCreatedEventArgsDto } from "./organization-created-eve
 import type { OrganizationFinalizedEventArgsDto } from "./organization-finalized-event-args-dto";
 import type { OrganizationStatusChangedEventArgsDto } from "./organization-status-changed-event-args-dto";
 import type { OrganizationUpdatedEventArgsDto } from "./organization-updated-event-args-dto";
+import type { OrgExecutorUpdatedEventArgsDto } from "./org-executor-updated-event-args-dto";
 import type { PolicyRuleSetEventArgsDto } from "./policy-rule-set-event-args-dto";
 import type { ProposalApprovedEventArgsDto } from "./proposal-approved-event-args-dto";
 import type { ProposalCancelledEventArgsDto } from "./proposal-cancelled-event-args-dto";
@@ -30,6 +31,7 @@ export type GovernanceEventArgsDto =
   | OrganizationFinalizedEventArgsDto
   | OrganizationStatusChangedEventArgsDto
   | OrganizationUpdatedEventArgsDto
+  | OrgExecutorUpdatedEventArgsDto
   | PolicyRuleSetEventArgsDto
   | ProposalApprovedEventArgsDto
   | ProposalCancelledEventArgsDto

@@ -3,6 +3,7 @@ export enum GovernanceEventName {
   OrganizationUpdated = "OrganizationUpdated",
   OrganizationStatusChanged = "OrganizationStatusChanged",
   OrganizationFinalized = "OrganizationFinalized",
+  OrgExecutorUpdated = "OrgExecutorUpdated",
   BodyCreated = "BodyCreated",
   BodyUpdated = "BodyUpdated",
   RoleCreated = "RoleCreated",

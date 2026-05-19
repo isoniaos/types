@@ -20,6 +20,7 @@ This package is the single shared type surface for IsoniaOS repositories, includ
 - activation capability and typed contract batch activation input types;
 - organization finalization status, event, contract function, and blocked bootstrap admin operation types;
 - v0.8 execution permission registry event and read-model DTOs;
+- v0.8 managed execution receipt and org executor event/read-model DTOs;
 - shared domain constants.
 
 It must stay dependency-light and must not depend on React, NestJS, wagmi, viem, database libraries, Control Plane, App Core, SaaS, or SDK code.
@@ -32,7 +33,7 @@ For the current v0.8 accountability and integration preview baseline, after the 
 ```json
 {
   "dependencies": {
-    "@isonia/types": "github:isoniaos/types#v0.8.0-alpha.3"
+    "@isonia/types": "github:isoniaos/types#v0.8.0-alpha.4"
   }
 }
 ```
@@ -91,6 +92,24 @@ import {
 The execution permission surface describes configured IsoniaOS protocol target rules, selector rules, update event arguments, and route blocked reason codes. It does not decode arbitrary customer target contracts or treat target contract events as governance authority.
 
 Proposal action identity in the v0.8 protocol is represented as `targetAddress + value + actionSelector + dataHash`. `actionSelector` is a protocol-level bytes4 selector field for proposal identity and execution checks. It is not ABI decoding, does not imply customer-contract indexing, and does not make arbitrary target-contract events authoritative.
+
+v0.8 managed execution receipts expose the canonical protocol execution receipt and org-scoped executor configuration without decoding customer ABIs:
+
+```ts
+import {
+  GovernanceEventName,
+  ProposalExecutionMode,
+  type OrgExecutorDto,
+  type OrgExecutorUpdatedEventArgsDto,
+  type OrganizationManagedExecutionDto,
+  type ProposalExecutedEventArgsDto,
+  type ProposalExecutionReceiptDto,
+} from "@isonia/types";
+```
+
+`ProposalExecutedEventArgsDto` mirrors the Solidity event shape, including `targetAddress`, `value`, `actionSelector`, `dataHash`, and `managedExecutorAddress`. The raw event DTO keeps `managedExecutorAddress` as an address even when it is the zero address. Higher-level read models can represent execution as `ProposalExecutionMode.Direct` or `ProposalExecutionMode.Managed` and may omit `managedExecutorAddress` when the receipt represents direct execution.
+
+The proposal action identity remains final-target based: `targetAddress + value + actionSelector + dataHash`. Managed execution means the protocol forwarded execution through an org-scoped executor; it does not make target-contract events governance authority, add customer ABI decoding, or make IsoniaOS a global superadmin.
 
 Contracts remain authoritative for modeled onchain governance state. External resources are evidence or context unless explicitly modeled as authoritative for a specific field. Manual accountability updates are annotations, not protocol truth.
 

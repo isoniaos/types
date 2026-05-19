@@ -8,6 +8,14 @@ During early development, versions are released as GitHub tags. Public package r
 
 ## [Unreleased]
 
+## [0.8.0-alpha.4]
+
+### Added
+
+- Added the v0.8 managed execution receipt type surface: enriched `ProposalExecutedEventArgsDto`, `OrgExecutorUpdatedEventArgsDto`, `ProposalExecutionMode`, `ProposalExecutionReceiptDto`, `OrgExecutorDto`, and `OrganizationManagedExecutionDto`.
+- Added `OrgExecutorUpdated` to shared governance event names and domain constants for org-scoped managed executor configuration.
+- Added optional execution receipt fields to `ProposalDto` for read models that have indexed the enriched protocol receipt while preserving compatibility with older deployments.
+
 ## [0.8.0-alpha.3]
 
 ### Added
@@ -84,7 +92,8 @@ During early development, versions are released as GitHub tags. Public package r
 - Domain constants for event names and raw event identity fields.
 - `policy_snapshot_missing` route blocked reason for versioned proposal route explanations.
 
-[Unreleased]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.3...HEAD
+[Unreleased]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.4...HEAD
+[0.8.0-alpha.4]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.3...v0.8.0-alpha.4
 [0.8.0-alpha.3]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.2...v0.8.0-alpha.3
 [0.8.0-alpha.2]: https://github.com/isoniaos/types/compare/v0.8.0-alpha.1...v0.8.0-alpha.2
 [0.8.0-alpha.1]: https://github.com/isoniaos/types/compare/v0.7.0-alpha.2...v0.8.0-alpha.1

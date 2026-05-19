@@ -30,6 +30,7 @@ export const DOMAIN_CONSTANTS = {
     GovernanceEventName.OrganizationUpdated,
     GovernanceEventName.OrganizationStatusChanged,
     GovernanceEventName.OrganizationFinalized,
+    GovernanceEventName.OrgExecutorUpdated,
     GovernanceEventName.BodyCreated,
     GovernanceEventName.BodyUpdated,
     GovernanceEventName.RoleCreated,

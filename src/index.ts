@@ -80,6 +80,7 @@ import type { OrganizationCreatedEventArgsDto } from "./events/organization-crea
 import type { OrganizationFinalizedEventArgsDto } from "./events/organization-finalized-event-args-dto";
 import type { OrganizationStatusChangedEventArgsDto } from "./events/organization-status-changed-event-args-dto";
 import type { OrganizationUpdatedEventArgsDto } from "./events/organization-updated-event-args-dto";
+import type { OrgExecutorUpdatedEventArgsDto } from "./events/org-executor-updated-event-args-dto";
 import type { PolicyRuleSetEventArgsDto } from "./events/policy-rule-set-event-args-dto";
 import type { ProposalApprovedEventArgsDto } from "./events/proposal-approved-event-args-dto";
 import type { ProposalCancelledEventArgsDto } from "./events/proposal-cancelled-event-args-dto";
@@ -112,6 +113,7 @@ import { GraphEdgeType } from "./enums/graph-edge-type";
 import { GraphNodeType } from "./enums/graph-node-type";
 import { ObservedTransactionStatus } from "./enums/observed-transaction-status";
 import { OrganizationStatus } from "./enums/organization-status";
+import { ProposalExecutionMode } from "./enums/proposal-execution-mode";
 import { ProposalStatus } from "./enums/proposal-status";
 import { ProposalType } from "./enums/proposal-type";
 import { RawEventStatus } from "./enums/raw-event-status";
@@ -168,9 +170,12 @@ import type { OrganizationDto } from "./rest/organization-dto";
 import type { OrganizationOverviewCountsDto } from "./rest/organization-overview-counts-dto";
 import type { OrganizationOverviewDto } from "./rest/organization-overview-dto";
 import type { OrganizationPoliciesDto, OrganizationPolicyDto } from "./rest/organization-policy-dto";
+import type { OrganizationManagedExecutionDto } from "./rest/organization-managed-execution-dto";
+import type { OrgExecutorDto } from "./rest/org-executor-dto";
 import type { PolicyRuleDto } from "./rest/policy-rule-dto";
 import type { ProposalDecisionDto } from "./rest/proposal-decision-dto";
 import type { ProposalDto } from "./rest/proposal-dto";
+import type { ProposalExecutionReceiptDto } from "./rest/proposal-execution-receipt-dto";
 import type { ProposalRouteDto } from "./rest/proposal-route-dto";
 import type { ProposalRouteExecutionDto } from "./rest/proposal-route-execution-dto";
 import type { ProposalRouteExplanationDto } from "./rest/proposal-route-explanation-dto";
@@ -310,6 +315,7 @@ export {
   ORGANIZATION_LIFECYCLE_STATUSES,
   ORGANIZATION_LIFECYCLE_STATUS_VALUES,
   type OrganizationLifecycleStatus,
+  type OrganizationManagedExecutionDto,
   type OrganizationOverviewCountsDto,
   type OrganizationOverviewDto,
   type OrganizationPoliciesDto,
@@ -319,6 +325,8 @@ export {
   OrganizationStatus,
   type OrganizationStatusChangedEventArgsDto,
   type OrganizationUpdatedEventArgsDto,
+  type OrgExecutorDto,
+  type OrgExecutorUpdatedEventArgsDto,
   type PolicyRuleDto,
   type PolicyRuleSetInput,
   type PolicyRuleSetEventArgsDto,
@@ -328,6 +336,8 @@ export {
   type ProposalCreatedEventArgsDto,
   type ProposalDecisionDto,
   type ProposalDto,
+  ProposalExecutionMode,
+  type ProposalExecutionReceiptDto,
   type ProposalExecutedEventArgsDto,
   type ProposalQueuedEventArgsDto,
   type ProposalStatusChangedEventArgsDto,

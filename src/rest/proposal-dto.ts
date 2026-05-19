@@ -5,8 +5,10 @@ import type { ChainId } from "../base/chain-id";
 import type { NumericString } from "../base/numeric-string";
 import type { TransactionHash } from "../base/transaction-hash";
 import { DataStatus } from "../enums/data-status";
+import { ProposalExecutionMode } from "../enums/proposal-execution-mode";
 import { ProposalStatus } from "../enums/proposal-status";
 import { ProposalType } from "../enums/proposal-type";
+import type { ProposalExecutionReceiptDto } from "./proposal-execution-receipt-dto";
 
 export interface ProposalDto {
   readonly chainId: ChainId;
@@ -28,5 +30,8 @@ export interface ProposalDto {
   readonly queuedAtChain?: NumericString;
   readonly executableAtChain?: NumericString;
   readonly executedAtChain?: NumericString;
+  readonly executionMode?: ProposalExecutionMode;
+  readonly managedExecutorAddress?: Address;
+  readonly executionReceipt?: ProposalExecutionReceiptDto;
   readonly dataStatus?: DataStatus;
 }
